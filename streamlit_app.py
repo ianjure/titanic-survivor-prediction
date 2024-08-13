@@ -122,28 +122,28 @@ with st.form("my_form"):
             "Embarked from?",
             ("Cherbourg", "Queenstown", "Southampton"))
 
-    # Every form must have a submit button.
-    submitted = st.form_submit_button("Submit")
+        # Every form must have a submit button.
+        submitted = st.form_submit_button("Submit")
 
-    if submitted:
-        cred_dict = {
-            'PassengerId': [1],
-            'Pclass': [pclass],
-            'Name': [name],
-            'Sex': [sex],
-            'Age': [age],
-            'SibSp': [sibsp],
-            'Parch': [parch],
-            'Ticket': ['A'],
-            'Fare': [32.20],
-            'Cabin': [cabin],
-            'Embarked': [embarked[0]]
-}
-        cred_df = pd.DataFrame(cred_dict)
-        creds = preprocess_cred(cred_df)
-        ypred = model.predict(creds)
-            
-        if ypred[0] == 0:
-          st.write("You will not survive!")
-        else:
-          st.write("You will survive!")
+        if submitted:
+                cred_dict = {
+                    'PassengerId': [1],
+                    'Pclass': [pclass],
+                    'Name': [name],
+                    'Sex': [sex],
+                    'Age': [age],
+                    'SibSp': [sibsp],
+                    'Parch': [parch],
+                    'Ticket': ['A'],
+                    'Fare': [32.20],
+                    'Cabin': [cabin],
+                    'Embarked': [embarked[0]]
+        }
+                cred_df = pd.DataFrame(cred_dict)
+                creds = preprocess_cred(cred_df)
+                ypred = model.predict(creds)
+                    
+                if ypred[0] == 0:
+                  st.write("You will not survive!")
+                else:
+                  st.write("You will survive!")
