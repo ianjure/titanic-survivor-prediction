@@ -6,7 +6,7 @@ def preprocess(df):
     df = df.drop(['PassengerId', 'Name', 'Ticket'], axis = 1)
 
     # CONVERT SEX TO BINARY
-    df['Sex'] = (df['Sex'] == 'male').astype(int)
+    df['Sex'] = (df['Sex'] == 'Male').astype(int)
 
     # CREATE PCLASS CATEGORIES COLUMNS
     df['Pclass_1'] = (df['Pclass'] == "1").astype(int)
