@@ -18,6 +18,26 @@ from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 
+# TRAIN USING THE WHOLE DATASET
+whole_data = pd.read_csv('/content/drive/MyDrive/MACHINE LEARNING/titanic_train.csv')
+
+data_processed = preprocess(whole_data)
+
+X = data_processed.drop('Survived', axis=1)
+y = data_processed['Survived']
+
+rf_model = RandomForestClassifier(
+          n_estimators=260,
+          max_depth=12,
+          min_samples_split=9,
+          min_samples_leaf=3,
+          max_features=None,
+          random_state=1212,
+          bootstrap=True
+          )
+
+rf_model.fit(X, y)
+
 def preprocess_cred(df):
 
     # DROP UNNECESSARY COLUMNS
@@ -115,7 +135,7 @@ with st.form("my_form"):
                 cred_df = pd.DataFrame(cred_dict)
                 creds = preprocess_cred(cred_df)
                 creds
-                ypred = model.predict(creds)
+                ypred = rf_model.predict(creds)
                 """
                 if ypred[0] == 0:
                   st.write("You will not survive!")
