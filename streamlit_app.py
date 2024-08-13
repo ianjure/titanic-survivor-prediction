@@ -12,9 +12,10 @@ hide = """
         """
 st.markdown(hide, unsafe_allow_html = True)
 
-st.title('🚢 Can You Survive the Titanic?')
+st.set_page_config(page_title="Can You Survive the Titanic?", page_icon=🚢, layout="centered", initial_sidebar_state="auto", menu_items=None)
 
-st.markdown("<h1 style='text-align: center; color: red;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
+# TITLE
+st.markdown("<h1 style='text-align: center; color: black;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 with st.form("my_form"):
     name = st.text_input("NAME", "")
