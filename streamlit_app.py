@@ -52,10 +52,10 @@ with st.form("my_form"):
         input_df = pd.DataFrame(input)
         input_final = preprocess(input_df)
 
-        model = pickle.load(open('titanic.pkl', 'rb'))
-        ypred = model.predict(input_final)
+        model = pickle.load(open('model.pkl', 'rb'))
+        pred = model.predict(input_final)
 
-        if ypred[0] == 0:
+        if pred[0] == 0:
             st.error(f"{name}, you will not survive!")
         else:
             st.success(f"{name}, you will survive!")
