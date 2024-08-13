@@ -130,7 +130,9 @@ with st.form("my_form"):
                     'Embarked': [embarked[0]]
         }
                 cred_df = pd.DataFrame(cred_dict)
+                st.write(cred_df)
                 creds = preprocess_cred(cred_df)
+                st.write(creds)
                 ypred = model.predict(creds)
                     
                 if ypred[0] == 0:
