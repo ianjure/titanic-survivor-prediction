@@ -83,26 +83,18 @@ model = pickle.load(open('titanic.pkl', 'rb'))
 
 with st.form("my_form"):
         name = st.text_input("Name", "What is your name?")
-        pclass = st.selectbox(
-    "Select a class",
-    ("1", "2", "3"))
-        sex = st.selectbox(
-    "Select a sex",
-    ("male", "female"))
+        pclass = st.selectbox("Select a class", ("1", "2", "3"))
+        sex = st.selectbox("Select a sex", ("male", "female"))
         age = st.number_input("What is your age?")
         sib = st.number_input("How many of your siblings are aboard?")
         sp = st.checkbox("Is your spouse aboard?")
         if sp:
-            sibsp = sib + 1
+                sibsp = sib + 1
         else:
                 sibsp = sib
         parch = st.number_input("Parents/Children aboard?")
-        cabin = st.selectbox(
-            "Select a cabin",
-            ("A", "B", "C", "D", "E", "F", "G", "T"))
-        embarked = st.selectbox(
-            "Embarked from?",
-            ("Cherbourg", "Queenstown", "Southampton"))
+        cabin = st.selectbox("Select a cabin", ("A", "B", "C", "D", "E", "F", "G", "T"))
+        embarked = st.selectbox("Embarked from?", ("Cherbourg", "Queenstown", "Southampton"))
 
         # Every form must have a submit button.
         submitted = st.form_submit_button("Submit")
@@ -119,15 +111,15 @@ with st.form("my_form"):
                     'Ticket': ['A'],
                     'Fare': [32.20],
                     'Cabin': [cabin],
-                    'Embarked': [embarked[0]]
-        }
+                    'Embarked': [embarked[0]]}
                 cred_df = pd.DataFrame(cred_dict)
-
                 creds = preprocess_cred(cred_df)
-
+                creds
+                """
                 ypred = model.predict(creds)
                     
                 if ypred[0] == 0:
                   st.write("You will not survive!")
                 else:
                   st.write("You will survive!")
+                """
