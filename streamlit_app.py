@@ -1,9 +1,9 @@
-st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="wide")
-
 import streamlit as st
 import pandas as pd
 import pickle
 from preprocess import preprocess
+
+st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="wide")
 
 hide = """
         <style>
