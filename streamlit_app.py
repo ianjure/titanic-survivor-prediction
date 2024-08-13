@@ -79,17 +79,6 @@ def preprocess_cred(df):
     df['OldAdult'] = ((df['Age'] > 30) & (df['Age'] <= 60)).astype(int)
     df['Old'] = (df['Age'] > 60).astype(int)
 
-    """
-    VALUE SCALING
-
-    # SCALE NUMERICAL FEATURES
-    '''
-    scaler = StandardScaler()
-
-    num_features = ['Age', 'Fare', 'Parch', 'SibSp', 'Family']
-    df[num_features] = scaler.fit_transform(df[num_features])
-    """
-
     final_df = df.copy()
 
     return final_df
