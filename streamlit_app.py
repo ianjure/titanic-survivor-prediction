@@ -18,7 +18,7 @@ st.markdown(hide, unsafe_allow_html = True)
 st.markdown("<h1 style='text-align: center; color: black;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 with st.form("my_form"):
-    name = st.text_input("NAME", "")
+    name = st.text_input("NAME", "John Smith")
     pclass = st.selectbox("CLASS", ("1", "2", "3"))
     sex = st.selectbox("SEX", ("male", "female"))
     age = st.slider("AGE", 0, 100, 18)
