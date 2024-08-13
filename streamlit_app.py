@@ -19,10 +19,6 @@ from sklearn.preprocessing import StandardScaler
 
 def preprocess_cred(df):
 
-    """
-    DATA PREPROCESSING
-    """
-
     # DROP UNNECESSARY COLUMNS
     df = df.drop(['PassengerId', 'Name', 'Ticket'], axis = 1)
 
@@ -51,10 +47,6 @@ def preprocess_cred(df):
 
     # DROP ORIGINAL PCLASS AND EMBARKED COLUMNS
     df = df.drop(['Pclass', 'Embarked', 'Cabin'], axis = 1)
-
-    """
-    FEATURE ENGINEERING
-    """
 
     # CREATE FAMILY COLUMN BY ADDING PARENT AND SIBLING COLUMNS
     df['Family'] = df['Parch'] + df['SibSp']
