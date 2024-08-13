@@ -39,7 +39,7 @@ with st.form("my_form"):
     if submitted:
         input = {'PassengerId': [1],
                     'Pclass': [pclass],
-                    'Name': [name],
+                    'Name': [name.split(" ")[0]],
                     'Sex': [sex],
                     'Age': [age],
                     'SibSp': [sibsp],
