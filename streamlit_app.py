@@ -19,7 +19,7 @@ from sklearn.preprocessing import StandardScaler
 from sklearn.ensemble import RandomForestClassifier
 
 # TRAIN USING THE WHOLE DATASET
-whole_data = pd.read_csv('/content/drive/MyDrive/MACHINE LEARNING/titanic_train.csv')
+whole_data = pd.read_csv('titanic_train.csv')
 
 data_processed = preprocess(whole_data)
 
