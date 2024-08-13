@@ -15,7 +15,7 @@ hide = """
 st.markdown(hide, unsafe_allow_html = True)
 
 # TITLE
-st.markdown("<h1 style='text-align: center; color: black;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 with st.form("my_form"):
     name = st.text_input("NAME", "John Smith")
