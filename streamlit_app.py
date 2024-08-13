@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from preprocess import preprocess
 
-st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered")
+st.set_page_config(page_title="Can You Survive the Titanic?", page_icon=None, layout="centered")
 
 hide = """
         <style>
@@ -20,7 +20,7 @@ st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive 
 with st.form("my_form"):
     name = st.text_input("NAME", "John Smith")
     pclass = st.selectbox("CLASS", ("1", "2", "3"))
-    sex = st.selectbox("SEX", ("male", "female"))
+    sex = st.selectbox("SEX", ("Male", "Female"))
     age = st.slider("AGE", 0, 100, 18)
     sib = st.slider("SIBLINGS", 0, 15, 0)
     sp = st.checkbox("DO YOU HAVE A SPOUSE?")
