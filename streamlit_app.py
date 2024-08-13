@@ -12,7 +12,7 @@ hide = """
         """
 st.markdown(hide, unsafe_allow_html = True)
 
-st.set_page_config(page_title="Can You Survive the Titanic?", page_icon=🚢, layout="centered", initial_sidebar_state="auto", menu_items=None)
+st.set_page_config(page_title="Can You Survive the Titanic?", page_icon=":ship:", layout="centered", initial_sidebar_state="auto", menu_items=None)
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: black;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
