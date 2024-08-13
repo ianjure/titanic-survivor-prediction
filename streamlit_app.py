@@ -79,8 +79,7 @@ def preprocess_cred(df):
 # LOAD MODEL
 import pickle
 
-with open('titanic.pkl', 'rb') as f:
-    model = pickle.load(f)
+model = pickle.load(open('titanic.pkl', 'rb'))
 
 with st.form("my_form"):
         name = st.text_input("Name", "What is your name?")
