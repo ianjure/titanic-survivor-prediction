@@ -39,7 +39,7 @@ with st.form("my_form"):
     if submitted:
         input = {'PassengerId': [1],
                     'Pclass': [pclass],
-                    'Name': [name.split(" ")[0]],
+                    'Name': [name],
                     'Sex': [sex],
                     'Age': [age],
                     'SibSp': [sibsp],
@@ -56,6 +56,6 @@ with st.form("my_form"):
         pred = model.predict(input_final)
 
         if pred[0] == 0:
-            st.error(f"{name}, you will not survive!")
+            st.error(f"{name.split(" ")[0]}, you will not survive!")
         else:
-            st.success(f"{name}, you will survive!")
+            st.success(f"{name.split(" ")[0]}, you will survive!")
