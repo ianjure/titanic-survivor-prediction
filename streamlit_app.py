@@ -96,7 +96,7 @@ def preprocess_cred(df):
 # LOAD MODEL
 import pickle
 
-with open('model.pkl', 'rb') as f:
+with open('https://github.com/ianjure/can-you-survive-the-titanic/blob/master/titanic.pkl', 'rb') as f:
     model = pickle.load(f)
 
 with st.form("my_form"):
