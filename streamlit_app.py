@@ -1,3 +1,5 @@
+st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="wide")
+
 import streamlit as st
 import pandas as pd
 import pickle
@@ -11,11 +13,6 @@ hide = """
         </style>
         """
 st.markdown(hide, unsafe_allow_html = True)
-
-st.set_page_config(
-    page_title="Can You Survive the Titanic?",
-    page_icon="🚢",
-    layout="wide")
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: black;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
