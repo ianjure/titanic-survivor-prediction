@@ -115,7 +115,7 @@ with st.form("my_form"):
                 cred_df = pd.DataFrame(cred_dict)
                 creds = preprocess_cred(cred_df)
                 creds
-                ypred = model.predict(creds)
+                ypred = model.predict_proba(creds)
                 """
                 if ypred[0] == 0:
                   st.write("You will not survive!")
