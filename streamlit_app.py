@@ -3,7 +3,7 @@ import pandas as pd
 import pickle
 from preprocess import preprocess
 
-st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="wide")
+st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered")
 
 hide = """
         <style>
