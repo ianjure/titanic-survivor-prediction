@@ -16,6 +16,7 @@ st.info('Enter your data below to test!')
 from sklearn.impute import KNNImputer
 from sklearn.preprocessing import LabelEncoder
 from sklearn.preprocessing import StandardScaler
+from sklearn.ensemble import RandomForestClassifier
 
 def preprocess_cred(df):
 
