@@ -134,6 +134,7 @@ with st.form("my_form"):
                 creds = preprocess_cred(cred_df)
                 st.write(creds)
                 ypred = model.predict(creds)
+                st.write(ypred)
                     
                 if ypred[0] == 0:
                   st.write("You will not survive!")
