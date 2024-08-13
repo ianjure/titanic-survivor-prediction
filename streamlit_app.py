@@ -1,5 +1,7 @@
 import streamlit as st
 import pandas as pd
+import pickle
+from preprocess import preprocess
 
 hide = """
         <style>
@@ -11,117 +13,28 @@ hide = """
 st.markdown(hide, unsafe_allow_html = True)
 
 st.title('🚢 Can You Survive the Titanic?')
-st.info('Enter your data below to test!')
-
-from sklearn.impute import KNNImputer
-from sklearn.preprocessing import LabelEncoder
-from sklearn.preprocessing import StandardScaler
-from sklearn.ensemble import RandomForestClassifier
-
-# TRAIN USING THE WHOLE DATASET
-whole_data = pd.read_csv('titanic_train.csv')
-
-data_processed = preprocess(whole_data)
-
-X = data_processed.drop('Survived', axis=1)
-y = data_processed['Survived']
-
-rf_model = RandomForestClassifier(
-          n_estimators=260,
-          max_depth=12,
-          min_samples_split=9,
-          min_samples_leaf=3,
-          max_features=None,
-          random_state=1212,
-          bootstrap=True
-          )
-
-rf_model.fit(X, y)
-
-def preprocess_cred(df):
-
-    # DROP UNNECESSARY COLUMNS
-    df = df.drop(['PassengerId', 'Name', 'Ticket'], axis = 1)
-
-    # CONVERT SEX TO BINARY
-    df['Sex'] = (df['Sex'] == 'male').astype(int)
-
-    # CREATE PCLASS CATEGORIES COLUMNS
-    df['Pclass_1'] = (df['Pclass'] == "1").astype(int)
-    df['Pclass_2'] = (df['Pclass'] == "2").astype(int)
-    df['Pclass_3'] = (df['Pclass'] == "3").astype(int)
-
-    # CREATE EMBARKED CATEGORIES COLUMNS
-    df['Embarked_C'] = (df['Embarked'] == 'C').astype(int)
-    df['Embarked_Q'] = (df['Embarked'] == 'Q').astype(int)
-    df['Embarked_S'] = (df['Embarked'] == 'S').astype(int)
-
-    # CREATE CABIN CATEGORIES COLUMNS
-    df['Cabin_A'] = (df['Cabin'] == 'A').astype(int)
-    df['Cabin_B'] = (df['Cabin'] == 'B').astype(int)
-    df['Cabin_C'] = (df['Cabin'] == 'C').astype(int)
-    df['Cabin_D'] = (df['Cabin'] == 'D').astype(int)
-    df['Cabin_E'] = (df['Cabin'] == 'E').astype(int)
-    df['Cabin_F'] = (df['Cabin'] == 'F').astype(int)
-    df['Cabin_G'] = (df['Cabin'] == 'G').astype(int)
-    df['Cabin_T'] = (df['Cabin'] == 'T').astype(int)
-
-    # DROP ORIGINAL PCLASS AND EMBARKED COLUMNS
-    df = df.drop(['Pclass', 'Embarked', 'Cabin'], axis = 1)
-
-    # CREATE FAMILY COLUMN BY ADDING PARENT AND SIBLING COLUMNS
-    df['Family'] = df['Parch'] + df['SibSp']
-
-    # CREATE ALONE COLUMN
-    df['Alone'] = (df['Family'] == 0).astype(int)
-
-    # CREATE FARE CLASSES
-    df['Very Low'] = (df['Fare'] <= 4).astype(int)
-    df['Low'] = ((df['Fare'] > 4) & (df['Fare'] <= 15)).astype(int)
-    df['Moderate'] = ((df['Fare'] > 15) & (df['Fare'] <= 25)).astype(int)
-    df['Medium'] = ((df['Fare'] > 25) & (df['Fare'] <= 50)).astype(int)
-    df['High'] = ((df['Fare'] > 50) & (df['Fare'] <= 100)).astype(int)
-    df['Very High'] = ((df['Fare'] > 100) & (df['Fare'] <= 250)).astype(int)
-    df['Luxury'] = (df['Fare'] > 250).astype(int)
-
-    # CREATE AGE CATEGORIES
-    df['Baby'] = (df['Age'] <= 5).astype(int)
-    df['Child'] = ((df['Age'] > 5) & (df['Age'] <= 14)).astype(int)
-    df['Teenager'] = ((df['Age'] > 14) & (df['Age'] <= 18)).astype(int)
-    df['Adult'] = ((df['Age'] > 18) & (df['Age'] <= 30)).astype(int)
-    df['OldAdult'] = ((df['Age'] > 30) & (df['Age'] <= 60)).astype(int)
-    df['Old'] = (df['Age'] > 60).astype(int)
-
-    final_df = df.copy()
-
-    return final_df
-
-# LOAD MODEL
-import pickle
-
-model = pickle.load(open('titanic.pkl', 'rb'))
 
 with st.form("my_form"):
-        name = st.text_input("Name", "What is your name?")
-        pclass = st.selectbox("Select a class", ("1", "2", "3"))
-        sex = st.selectbox("Select a sex", ("male", "female"))
-        age = st.number_input("What is your age?")
-        sib = st.number_input("How many of your siblings are aboard?")
-        sp = st.checkbox("Is your spouse aboard?")
-        if sp:
-                sibsp = sib + 1
-        else:
-                sibsp = sib
-        parch = st.number_input("Parents/Children aboard?")
-        cabin = st.selectbox("Select a cabin", ("A", "B", "C", "D", "E", "F", "G", "T"))
-        embarked = st.selectbox("Embarked from?", ("Cherbourg", "Queenstown", "Southampton"))
+    name = st.text_input("NAME", "")
+    pclass = st.selectbox("CLASS", ("1", "2", "3"))
+    sex = st.selectbox("SEX", ("male", "female"))
+    age = st.slider("AGE", 0, 100, 18)
+    sib = st.slider("SIBLINGS", 0, 15, 0)
+    sp = st.checkbox("DO YOU HAVE A SPOUSE?")
+    if sp:
+        sibsp = sib + 1
+    else:
+        sibsp = sib
+    par = st.slider("PARENTS", 0, 2, 0)
+    ch = st.slider("CHILDREN", 0, 15, 0)
+    parch = par + ch
+    cabin = st.selectbox("CABIN", ("A", "B", "C", "D", "E", "F", "G", "T"))
+    embarked = st.selectbox("WHERE ARE YOU EMBARKED FROM?", ("Cherbourg", "Queenstown", "Southampton"))
 
-        # Every form must have a submit button.
-        submitted = st.form_submit_button("Submit")
+    submitted = st.form_submit_button("Submit")
 
-        if submitted:
-                cred_dict = {
-                    'PassengerId': [1],
+    if submitted:
+        input = {'PassengerId': [1],
                     'Pclass': [pclass],
                     'Name': [name],
                     'Sex': [sex],
@@ -131,14 +44,15 @@ with st.form("my_form"):
                     'Ticket': ['A'],
                     'Fare': [32.20],
                     'Cabin': [cabin],
-                    'Embarked': [embarked[0]]}
-                cred_df = pd.DataFrame(cred_dict)
-                creds = preprocess_cred(cred_df)
-                creds
-                ypred = rf_model.predict(creds)
-                """
-                if ypred[0] == 0:
-                  st.write("You will not survive!")
-                else:
-                  st.write("You will survive!")
-                """
+                    'Embarked': [embarked[0]]
+                    }
+        input_df = pd.DataFrame(input)
+        input_final = preprocess(input_df)
+
+        model = pickle.load(open('titanic.pkl', 'rb'))
+        ypred = model.predict(input_final)
+
+        if ypred[0] == 0:
+            st.error(f"{name}, you will not survive!")
+        else:
+            st.success(f"{name}, you will survive!")
