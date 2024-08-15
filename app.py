@@ -46,7 +46,7 @@ toast = """
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
-                padding-left: 5px;
+                padding-left: 50px;
         }
         </style>
         """
