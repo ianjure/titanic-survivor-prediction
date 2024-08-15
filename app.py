@@ -49,6 +49,9 @@ toast = """
                 font-size: 18px;
                 color: #24252d;
         }
+        svg[data-baseweb="icon"] {
+                color: black;
+        }
         </style>
         """
 st.markdown(toast, unsafe_allow_html=True)
