@@ -49,7 +49,7 @@ toast = """
                 font-size: 18px;
                 color: #24252d;
         }
-        svg[data-baseweb="icon"] {
+        [data-testid=toastContainer] > svg {
                 color: black;
         }
         </style>
@@ -103,7 +103,7 @@ with stylable_container(
                                     width: inherit;
                                     color: white;
                                     background-color: #716144;
-                                    border-color: white;
+                                    border-color: #736345;
                         }
                         """
                 ):
