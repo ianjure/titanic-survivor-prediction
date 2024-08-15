@@ -54,7 +54,7 @@ with stylable_container(
                         }
                         """
                 ):
-                        submitted = st.form_submit_button("S U B M I T")
+                        submitted = st.form_submit_button("SUBMIT")
                 
                 if submitted:
                         input = {'PassengerId': [1],
