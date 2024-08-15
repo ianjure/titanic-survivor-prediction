@@ -20,7 +20,7 @@ toast = """
         <style>
         div[data-testid=stToast] {
                 position: relative;
-                width: 100%;
+                width: 80%;
         }
              
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
