@@ -14,7 +14,24 @@ hide = """
         header {visibility: hidden;}
         </style>
         """
-st.markdown(hide, unsafe_allow_html = True)
+st.markdown(hide, unsafe_allow_html=True)
+
+toast = """
+        <style>
+        div[data-testid=stToast] {
+                padding:  20px 10px 40px 10px;
+                margin: 10px 400px 200px 10px;
+                background-color: #ff0000;
+                width: 30%;
+        }
+             
+        [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
+                font-size: 20px; font-style: normal; font-weight: 400;
+                foreground-color: #ffffff;
+        }
+        </style>
+        """
+st.markdown(toast, unsafe_allow_html=True)
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
