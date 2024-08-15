@@ -22,7 +22,7 @@ with stylable_container(
         key = "titanic_form",
         css_styles = """
         div[data-testid="stForm"] {
-                background-color: #ffffff;
+                background-color: #5c94af;
         }
         """
         ):
