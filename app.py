@@ -32,7 +32,8 @@ toast = """
                 max-width: 300px;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
-                font-size: 15px;
+                font-size: 18px;
+                justify-content: center;
         }
         </style>
         """
