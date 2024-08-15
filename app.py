@@ -12,7 +12,7 @@ top = """
         <style>
         .block-container {
             padding-top: 0rem;
-            padding-bottom: 1rem;
+            padding-bottom: 2rem;
             margin-top: 0rem;
         }
         </style>
@@ -60,7 +60,7 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 ship_anim = load_lottiefile('ship.json')
-st_lottie(ship_anim, loop = True, quality = 'high', height = 100)
+st_lottie(ship_anim, loop = True, quality = 'high', height = 150)
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
@@ -75,23 +75,28 @@ with stylable_container(
         ):
         with st.form("my_form"):
                 name = st.text_input("NAME", "John Smith")
+                class_col, status_col, sex_col = st.columns(3)
+                with class_col:
+                        pclass = st.selectbox("CLASS", ("1", "2", "3"))
+                with status_col:
+                        sp = st.selectbox("STATUS", ("Single", "Married"))
+                with sex_col:
+                        sex = st.selectbox("SEX", ("Male", "Female"))
                 col1, col2 = st.columns(2)
                 with col1:
-                        pclass = st.selectbox("CLASS", ("1", "2", "3"))
                         age = st.slider("AGE", 0, 100, 18)
+                        par = st.slider("PARENTS", 0, 2, 0)
+                        cabin = st.selectbox("CABIN", ("A", "B", "C", "D", "E", "F", "G", "T"))
                 with col2:
-                        sex = st.selectbox("SEX", ("Male", "Female"))
                         sib = st.slider("SIBLINGS", 0, 15, 0)
-                sp = st.checkbox("DO YOU HAVE A SPOUSE?")
-                if sp:
+                        ch = st.slider("CHILDREN", 0, 15, 0)
+                        embarked = st.selectbox("WHERE ARE YOU EMBARKED FROM?", ("Cherbourg", "Queenstown", "Southampton"))
+                        
+                if sp == "Married":
                         sibsp = sib + 1
                 else:
                         sibsp = sib
-                par = st.slider("PARENTS", 0, 2, 0)
-                ch = st.slider("CHILDREN", 0, 15, 0)
                 parch = par + ch
-                cabin = st.selectbox("CABIN", ("A", "B", "C", "D", "E", "F", "G", "T"))
-                embarked = st.selectbox("WHERE ARE YOU EMBARKED FROM?", ("Cherbourg", "Queenstown", "Southampton"))
 
                 with stylable_container(
                         key = "form_button",
