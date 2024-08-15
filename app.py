@@ -97,7 +97,7 @@ with stylable_container(
                         button[data-testid="baseButton-secondaryFormSubmit"] {
                                     width: inherit;
                                     color: white;
-                                    background-color: #5c94af;
+                                    background-color: #716144;
                                     border-color: white;
                         }
                         """
