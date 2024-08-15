@@ -20,9 +20,18 @@ toast = """
         <style>
         div[data-testid=stToast] {
                 position: relative;
-                width: 80%;
+                width: 50%;
         }
-             
+
+        [data-testid=toastContainer] {
+                position:absolute;
+                width:100%;
+                margin:0 50px;
+                max-width:300px;
+                height:100%;
+                left:50%;
+                -webkit-transform:translateX(-50%);
+        }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 20px;
         }
