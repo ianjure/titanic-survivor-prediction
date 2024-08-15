@@ -31,7 +31,6 @@ toast = """
                 margin: 0 auto;
                 margin-inline: auto;
                 max-width: 300px;
-                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
