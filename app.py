@@ -82,15 +82,18 @@ with stylable_container(
                         sp = st.selectbox("STATUS", ("Single", "Married"))
                 with sex_col:
                         sex = st.selectbox("SEX", ("Male", "Female"))
+                cabin_col, embarked_col = st.columns(2)
+                with cabin_col:
+                        cabin = st.selectbox("CABIN", ("A", "B", "C", "D", "E", "F", "G", "T"))
+                with embarked_col:
+                        embarked = st.selectbox("EMBARKED", ("Cherbourg", "Queenstown", "Southampton"))
                 col1, col2 = st.columns(2)
                 with col1:
                         age = st.slider("AGE", 0, 100, 18)
                         par = st.slider("PARENTS", 0, 2, 0)
-                        cabin = st.selectbox("CABIN", ("A", "B", "C", "D", "E", "F", "G", "T"))
                 with col2:
                         sib = st.slider("SIBLINGS", 0, 15, 0)
                         ch = st.slider("CHILDREN", 0, 15, 0)
-                        embarked = st.selectbox("WHERE ARE YOU EMBARKED FROM?", ("Cherbourg", "Queenstown", "Southampton"))
                         
                 if sp == "Married":
                         sibsp = sib + 1
