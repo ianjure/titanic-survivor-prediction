@@ -60,10 +60,13 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 ship_anim = load_lottiefile('ship.json')
-st_lottie(ship_anim, loop = True, quality = 'high', height = 150)
 
 # TITLE
-st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
+anim, title = st.columns(2)
+with anim:
+        st_lottie(ship_anim, loop = True, quality = 'high', height = 50)
+with title:
+        st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 with stylable_container(
         key = "titanic_form",
