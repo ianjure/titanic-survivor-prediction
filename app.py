@@ -42,8 +42,19 @@ with stylable_container(
                 parch = par + ch
                 cabin = st.selectbox("CABIN", ("A", "B", "C", "D", "E", "F", "G", "T"))
                 embarked = st.selectbox("WHERE ARE YOU EMBARKED FROM?", ("Cherbourg", "Queenstown", "Southampton"))
-                
-                submitted = st.form_submit_button("Submit")
+
+                with stylable_container(
+                        key = "form_button"
+                        css_styles = """
+                        button[data-testid="baseButton-secondaryFormSubmit"] {
+                                    width: inherit;
+                                    color: white;
+                                    background-color: #5c94af;
+                                    border-color: white;
+                        }
+                        """
+                ):
+                        submitted = st.form_submit_button("Submit")
                 
                 if submitted:
                         input = {'PassengerId': [1],
