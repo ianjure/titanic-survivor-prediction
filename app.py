@@ -30,13 +30,12 @@ toast = """
                 width: 100%;
                 margin: 0 auto;
                 margin-inline: auto;
-                min-width: 300px;
-                max-width: 400px;
-                justify-content: center;
+                max-width: 300px;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
-                justify-content: center;
+                display: flex;
+  j             justify-content: center;
         }
         </style>
         """
