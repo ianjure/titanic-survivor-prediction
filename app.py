@@ -49,7 +49,7 @@ toast = """
                 font-size: 18px;
                 color: #24252d;
         }
-        [data-testid=toastContainer] > svg {
+        svg[data-baseweb="icon"] [title="Close"] {
                 color: black;
         }
         </style>
