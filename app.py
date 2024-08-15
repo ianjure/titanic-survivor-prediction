@@ -3,6 +3,7 @@ import pandas as pd
 import pickle
 from preprocess import preprocess
 from streamlit_extras.stylable_container import stylable_container
+from streamlit_extras.let_it_rain import rain
 
 st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered")
 
@@ -75,7 +76,8 @@ with stylable_container(
                         model = pickle.load(open('model.pkl', 'rb'))
                         pred = model.predict(input_final)
                         
-if pred[0] == 0:
-    st.error(f"{name.split(" ")[0]}, you will not survive!")
-else:
-    st.success(f"{name.split(" ")[0]}, you will survive!")
+                        if pred[0] == 0:
+                                    st.write(f"{name.split(" ")[0]}, you will not survive!")
+                        else:
+                                    st.write(f"{name.split(" ")[0]}, you will survive!")
+                                    st.balloons()
