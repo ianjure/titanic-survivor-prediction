@@ -29,9 +29,10 @@ toast = """
                 width: 100%;
                 margin: 0 auto;
                 margin-inline: auto;
+                max-width: 300px;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
-                font-size: 20px;
+                font-size: 15px;
         }
         </style>
         """
