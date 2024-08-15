@@ -32,7 +32,7 @@ toast = """
         div[data-testid=stToast] {
                 position: relative;
                 width: 100%;
-                background-color: #344c5c;
+                background-color: #bfb7b9;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
 
