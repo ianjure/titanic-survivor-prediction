@@ -1,9 +1,9 @@
 import streamlit as st
 import pandas as pd
 import pickle
+import time
 from preprocess import preprocess
 from streamlit_extras.stylable_container import stylable_container
-from streamlit_extras.let_it_rain import rain
 
 st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered")
 
@@ -77,10 +77,12 @@ with stylable_container(
                         pred = model.predict(input_final)
                         
                         if pred[0] == 0:
-                                st.warning(f"{name.split(" ")[0]}, you will not survive!")
                                 st.snow()
+                                st.toast(f"{name.split(" ")[0]}, you will not survive!")
+                                time.sleep(3)
                                 st.rerun()
                         else:
-                                st.success(f"{name.split(" ")[0]}, you will survive!")
                                 st.balloons()
+                                st.toast(f"{name.split(" ")[0]}, you will survive!")
+                                time.sleep(3)
                                 st.rerun()
