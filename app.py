@@ -22,7 +22,7 @@ toast = """
                 position: relative;
                 width: 100%;
                 background-color: #344c5c;
-                box-shadow: none;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
 
         [data-testid=toastContainer] {
@@ -31,7 +31,7 @@ toast = """
                 margin: 0 auto;
                 margin-inline: auto;
                 max-width: 300px;
-                box-shadow: none;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
