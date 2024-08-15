@@ -40,8 +40,8 @@ toast = """
                 position: absolute;
                 margin: 0 auto;
                 margin-inline: auto;
-                min-width: 300px;
-                max-width: 300px;
+                min-width: 350px;
+                max-width: 350px;
                 display: flex;
                 justify-content: center;
         }
