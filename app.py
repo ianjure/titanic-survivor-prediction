@@ -22,7 +22,8 @@ with stylable_container(
         key = "titanic_form",
         css_styles = """
         div[data-testid="stForm"] {
-                background-color: #529ec8
+                background-color: #ffffff;
+                opacity: 50%
         }
         """
         ):
