@@ -50,7 +50,7 @@ toast = """
                 color: #24252d;
         }
         svg[data-baseweb="icon"] {
-                color: black;
+                color: #5d6164;
         }
         </style>
         """
