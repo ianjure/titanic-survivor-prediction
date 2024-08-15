@@ -43,10 +43,10 @@ toast = """
                 max-width: 350px;
                 display: flex;
                 justify-content: center;
+                padding-left: 10px;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
-                padding-left: 50px;
         }
         </style>
         """
