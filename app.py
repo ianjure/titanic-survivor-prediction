@@ -2,6 +2,7 @@ import streamlit as st
 import pandas as pd
 import pickle
 import time
+from streamlit_lottie import *
 from preprocess import preprocess
 from streamlit_extras.stylable_container import stylable_container
 
@@ -43,7 +44,12 @@ toast = """
         """
 st.markdown(toast, unsafe_allow_html=True)
 
-st.markdown('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/c569d594-c65c-49db-8862-8ecf44164d14/u9xjaFm0Ud.json" background="##fff" speed="1" style="width: 300px; height: 300px" loop controls autoplay direction="1" mode="normal"></lottie-player>')
+def load_lottiefile(filepath: str):
+    with open(filepath, "r") as f:
+        return json.load(f)
+
+ship_anim = load_lottiefile('ship.json')
+st_lottie(ship_anim, loop = True, quality = 'high')
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
