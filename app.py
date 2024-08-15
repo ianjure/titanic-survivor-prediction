@@ -78,10 +78,10 @@ with stylable_container(
                 col1, col2 = st.columns(2)
                 with col1:
                         pclass = st.selectbox("CLASS", ("1", "2", "3"))
+                        age = st.slider("AGE", 0, 100, 18)
                 with col2:
                         sex = st.selectbox("SEX", ("Male", "Female"))
-                age = st.slider("AGE", 0, 100, 18)
-                sib = st.slider("SIBLINGS", 0, 15, 0)
+                        sib = st.slider("SIBLINGS", 0, 15, 0)
                 sp = st.checkbox("DO YOU HAVE A SPOUSE?")
                 if sp:
                         sibsp = sib + 1
