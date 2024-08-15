@@ -21,6 +21,7 @@ toast = """
         div[data-testid=stToast] {
                 position: relative;
                 width: 100%;
+                background-color: #344c5c;
         }
 
         [data-testid=toastContainer] {
@@ -28,7 +29,6 @@ toast = """
                 width: 100%;
                 margin: 0 auto;
                 margin-inline: auto;
-                max-width: 300px;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 20px;
