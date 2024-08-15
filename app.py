@@ -10,8 +10,10 @@ st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", 
 
 top = """
         <style>
-        #root > div:nth-child(1) > div.withScreencast > div > div > div > section:nth-child(2) {
-        height: 3rem !important;
+        .block-container {
+            padding-top: 1rem;
+            padding-bottom: 0rem;
+            margin-top: 1rem;
         }
         </style>
         """
