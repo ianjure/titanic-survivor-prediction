@@ -26,6 +26,7 @@ toast = """
         [data-testid=toastContainer] {
                 position:absolute;
                 width: 100%;
+                margin:0 auto;
                 max-width: 300px;
                 -webkit-transform:translateX(-50%);
         }
