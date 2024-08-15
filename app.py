@@ -23,7 +23,6 @@ with stylable_container(
         css_styles = """
         div[data-testid="stForm"] {
                 background-color: #ffffff;
-                opacity: 50%
         }
         """
         ):
