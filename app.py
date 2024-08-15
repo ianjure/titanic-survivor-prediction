@@ -98,7 +98,7 @@ with stylable_container(
                                     width: inherit;
                                     color: white;
                                     background-color: #716144;
-                                    border-color: white;
+                                    border-color: #716144;
                         }
                         """
                 ):
