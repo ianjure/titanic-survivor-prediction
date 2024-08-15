@@ -32,8 +32,9 @@ toast = """
         div[data-testid=stToast] {
                 position: relative;
                 width: 100%;
-                background-color: #bfb7b9;
+                background-color: #716144;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+                padding-left: 10px;
         }
 
         [data-testid=toastContainer] {
@@ -43,7 +44,6 @@ toast = """
                 max-width: 350px;
                 display: flex;
                 justify-content: center;
-                padding-left: 10px;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
