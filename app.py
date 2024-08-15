@@ -66,6 +66,9 @@ with stylable_container(
                 background-color: #5c94af;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
+        svg[title="open"] {
+                color: white;
+        }
         """
         ):
         with st.form("my_form"):
