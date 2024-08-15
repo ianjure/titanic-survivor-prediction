@@ -75,8 +75,11 @@ with stylable_container(
         ):
         with st.form("my_form"):
                 name = st.text_input("NAME", "John Smith")
-                pclass = st.selectbox("CLASS", ("1", "2", "3"))
-                sex = st.selectbox("SEX", ("Male", "Female"))
+                col1, col2 = st.columns(2)
+                with col1:
+                        pclass = st.selectbox("CLASS", ("1", "2", "3"))
+                with col2:
+                        sex = st.selectbox("SEX", ("Male", "Female"))
                 age = st.slider("AGE", 0, 100, 18)
                 sib = st.slider("SIBLINGS", 0, 15, 0)
                 sp = st.checkbox("DO YOU HAVE A SPOUSE?")
