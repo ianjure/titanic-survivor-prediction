@@ -44,7 +44,7 @@ with stylable_container(
                 embarked = st.selectbox("WHERE ARE YOU EMBARKED FROM?", ("Cherbourg", "Queenstown", "Southampton"))
 
                 with stylable_container(
-                        key = "form_button"
+                        key = "form_button",
                         css_styles = """
                         button[data-testid="baseButton-secondaryFormSubmit"] {
                                     width: inherit;
