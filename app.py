@@ -43,6 +43,8 @@ toast = """
         """
 st.markdown(toast, unsafe_allow_html=True)
 
+st.markdown('<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script><lottie-player src="https://lottie.host/c569d594-c65c-49db-8862-8ecf44164d14/u9xjaFm0Ud.json" background="##fff" speed="1" style="width: 300px; height: 300px" loop controls autoplay direction="1" mode="normal"></lottie-player>')
+
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
