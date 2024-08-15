@@ -24,11 +24,11 @@ toast = """
         }
 
         [data-testid=toastContainer] {
-                position:absolute;
+                position: absolute;
                 width: 100%;
-                margin:0 auto;
+                margin: 0 auto;
+                margin-inline: auto;
                 max-width: 300px;
-                -webkit-transform:translateX(-50%);
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 20px;
