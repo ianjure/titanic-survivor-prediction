@@ -20,7 +20,7 @@ toast = """
         <style>
         div[data-testid=stToast] {
                 position: relative;
-                width: 100%;
+                width: 80%;
                 background-color: #344c5c;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
