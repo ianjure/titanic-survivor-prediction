@@ -49,7 +49,7 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 ship_anim = load_lottiefile('ship.json')
-st_lottie(ship_anim, loop = True, quality = 'high')
+st_lottie(ship_anim, loop = True, quality = 'low')
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
