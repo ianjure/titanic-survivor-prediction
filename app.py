@@ -40,15 +40,13 @@ toast = """
                 position: absolute;
                 margin: 0 auto;
                 margin-inline: auto;
-                min-width: 350px;
                 max-width: 350px;
                 display: flex;
                 justify-content: center;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
-                display: flex;
-                justify-content: center;
+                padding-left: 5px;
         }
         </style>
         """
