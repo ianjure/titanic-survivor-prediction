@@ -22,6 +22,7 @@ toast = """
                 position: relative;
                 width: 100%;
                 background-color: #344c5c;
+                box-shadow: none;
         }
 
         [data-testid=toastContainer] {
@@ -30,6 +31,7 @@ toast = """
                 margin: 0 auto;
                 margin-inline: auto;
                 max-width: 300px;
+                box-shadow: none;
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 18px;
@@ -101,7 +103,7 @@ with stylable_container(
                         
                         if pred[0] == 0:
                                 st.toast(f"{name.split(" ")[0]}, you will not survive!", icon="😭")
-                                time.sleep(5)
+                                time.sleep(8)
                         else:
                                 st.toast(f"{name.split(" ")[0]}, you will survive!", icon="😄")
-                                time.sleep(5)
+                                time.sleep(8)
