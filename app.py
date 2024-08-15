@@ -60,6 +60,7 @@ with stylable_container(
         css_styles = """
         div[data-testid="stForm"] {
                 background-color: #5c94af;
+                box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
         """
         ):
@@ -98,7 +99,7 @@ with stylable_container(
                                     width: inherit;
                                     color: white;
                                     background-color: #716144;
-                                    border-color: #716144;
+                                    box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
                         }
                         """
                 ):
