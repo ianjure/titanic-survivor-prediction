@@ -79,10 +79,6 @@ with stylable_container(
                         if pred[0] == 0:
                                 st.snow()
                                 st.toast(f"{name.split(" ")[0]}, you will not survive!")
-                                time.sleep(3)
-                                st.rerun()
                         else:
                                 st.balloons()
                                 st.toast(f"{name.split(" ")[0]}, you will survive!")
-                                time.sleep(3)
-                                st.rerun()
