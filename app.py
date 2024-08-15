@@ -20,7 +20,7 @@ toast = """
         <style>
         div[data-testid=stToast] {
                 position: relative;
-                width: 80%;
+                width: 100%;
                 background-color: #344c5c;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
         }
@@ -29,7 +29,7 @@ toast = """
                 position: absolute;
                 margin: 0 auto;
                 margin-inline: auto;
-                min-width: 150px;
+                min-width: 300px;
                 max-width: 300px;
                 display: flex;
                 justify-content: center;
