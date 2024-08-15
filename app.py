@@ -75,7 +75,7 @@ with stylable_container(
                         model = pickle.load(open('model.pkl', 'rb'))
                         pred = model.predict(input_final)
                         
-                        if pred[0] == 0:
-                            st.error(f"{name.split(" ")[0]}, you will not survive!")
-                        else:
-                            st.success(f"{name.split(" ")[0]}, you will survive!")
+if pred[0] == 0:
+    st.error(f"{name.split(" ")[0]}, you will not survive!")
+else:
+    st.success(f"{name.split(" ")[0]}, you will survive!")
