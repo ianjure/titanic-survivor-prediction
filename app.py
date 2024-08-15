@@ -11,7 +11,7 @@ top = """
         <style>
         .block-container {
             padding-top: 0rem;
-            padding-bottom: 3rem;
+            padding-bottom: 2rem;
             margin-top: 0rem;
         }
         </style>
@@ -55,7 +55,7 @@ toast = """
 st.markdown(toast, unsafe_allow_html=True)
 
 # TITLE
-st.markdown("<h1 style='text-align: center; color: white;'>🚢 Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
+st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 with stylable_container(
         key = "titanic_form",
