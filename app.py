@@ -19,7 +19,7 @@ st.markdown(hide, unsafe_allow_html=True)
 toast = """
         <style>
         div[data-testid=stToast] {
-                background-color: #ffffff;
+                margin: 10px 400px 200px 10px;
         }
              
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
