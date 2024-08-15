@@ -77,8 +77,8 @@ with stylable_container(
                         pred = model.predict(input_final)
                         
                         if pred[0] == 0:
-                                st.snow()
                                 st.toast(f"{name.split(" ")[0]}, you will not survive!", icon="😭")
+                                time.sleep(5)
                         else:
-                                st.balloons()
                                 st.toast(f"{name.split(" ")[0]}, you will survive!", icon="😄")
+                                time.sleep(5)
