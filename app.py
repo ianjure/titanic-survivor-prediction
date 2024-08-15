@@ -12,7 +12,7 @@ top = """
         <style>
         .block-container {
             padding-top: 0rem;
-            padding-bottom: 2rem;
+            padding-bottom: 3rem;
             margin-top: 0rem;
         }
         </style>
@@ -60,6 +60,7 @@ def load_lottiefile(filepath: str):
         return json.load(f)
 
 ship_anim = load_lottiefile('ship.json')
+st_lottie(ship_anim, loop = True, quality = 'high', height = 120)
 
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
@@ -138,5 +139,3 @@ with stylable_container(
                         else:
                                 st.toast(f"{name.split(" ")[0]}, you will survive!", icon="😄")
                                 time.sleep(8)
-
-st_lottie(ship_anim, loop = True, quality = 'high', height = 150)
