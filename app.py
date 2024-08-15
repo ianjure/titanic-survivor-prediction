@@ -77,7 +77,8 @@ with stylable_container(
                         pred = model.predict(input_final)
                         
                         if pred[0] == 0:
-                                    st.write(f"{name.split(" ")[0]}, you will not survive!")
+                                st.info(f"{name.split(" ")[0]}, you will not survive!")
+                                st.snow()
                         else:
-                                    st.write(f"{name.split(" ")[0]}, you will survive!")
-                                    st.balloons()
+                                st.info(f"{name.split(" ")[0]}, you will survive!")
+                                st.balloons()
