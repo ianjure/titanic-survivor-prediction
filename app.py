@@ -24,7 +24,6 @@ toast = """
              
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 20px;
-                color: black;
         }
         </style>
         """
