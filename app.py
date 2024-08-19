@@ -52,6 +52,9 @@ toast = """
         svg[data-baseweb="icon"] {
                 color: #5d6164;
         }
+        svg[data-baseweb="icon"]:hover {
+                color: #5d6164;
+        }
         </style>
         """
 st.markdown(toast, unsafe_allow_html=True)
