@@ -11,7 +11,7 @@ top = """
         <style>
         .block-container {
             padding-top: 5rem;
-            padding-bottom: 2rem;
+            padding-bottom: 5rem;
             margin-top: 0rem;
         }
         </style>
