@@ -1,4 +1,4 @@
-# Titanic Survivor Prediction
+# Titanic Survivor Prediction &nbsp; [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ianjure/titanic-survivor-prediction/blob/master/Titanic_Survivor_Prediction_Notebook.ipynb)
 Let's go back to 1912 and explore the data behind the **Titanic** tragedy. The goal of this project is to create a machine learning model to predict if a passenger will survive the incident. We will utilize classification algorithms and processed data to find the best model. After that, we will create a web application that anyone can use to try and test our model with new data inputs.
 
 ## Data Overview
