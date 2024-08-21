@@ -17,14 +17,14 @@ Features:
 * Embarked - Passenger's port of embarkation
 
 # Project Method
-1. **Clean the Data:** Handle missing values, feature engineer new variables, and process categorical columns.
+1. **Clean the Data:** Handle missing values, create new features, and process categorical variables.
 2. **Explore the Data:** Find meaningful insights and relationships among the variables.
 3. **Build the Model:** Train the algorithms and fine-tune the best model.
 4. **Deploy the Model:** Build a Streamlit web application to test new data.
 
-# What to do next?
-1. Improve the quality of the data.
-2. Test more sophisticated models.
+# Next Steps
+1. Improve the quality of the data by creating new and relevant features.
+2. Try more sophisticated classification models and tuning methods.
 
 <br>
 
