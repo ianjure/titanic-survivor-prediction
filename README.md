@@ -1,7 +1,7 @@
 # Titanic Survivor Prediction
 Let's go back to 1912 and explore the data behind the Titanic tragedy. The goal of this project is to create a machine learning model to predict if a passenger will survive the incident. We will utilize classification algorithms and processed data to find the best model. After that, we will create a web application that anyone can use to try and test our model with new data inputs.
 
-# Dataset Overview
+# Data Overview
 Dataset: [Titanic - Machine Learning from Disaster](https://www.kaggle.com/competitions/titanic/data)
 
 Features:
