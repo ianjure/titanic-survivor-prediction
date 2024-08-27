@@ -65,10 +65,12 @@ st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the T
 
 # SIDEBAR
 with st.sidebar:
-    add_radio = st.radio(
-        "Choose a shipping method",
-        ("Standard (5-15 days)", "Express (2-5 days)")
-    )
+        st.info("Creator: Ian Jure Macalisang")
+        b1_col, b2_col = st.columns(2)
+        with b1_col:
+                repo_button = st.button("SOURCE CODE")
+        with b2_col:
+                notebook_button = st.button("NOTEBOOK")
 
 # FORM
 with stylable_container(
