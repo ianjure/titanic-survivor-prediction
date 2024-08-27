@@ -7,12 +7,13 @@ from streamlit_extras.stylable_container import stylable_container
 
 st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered")
 
+# PAGE CONFIGURATIONS
 top = """
         <style>
         .block-container {
-            padding-top: 5rem;
-            padding-bottom: 5rem;
-            margin-top: 0rem;
+                padding-top: 5rem;
+                padding-bottom: 5rem;
+                margin-top: 0rem;
         }
         </style>
         """
@@ -26,6 +27,15 @@ hide = """
         </style>
         """
 st.markdown(hide, unsafe_allow_html=True)
+
+sidebar = """
+        <style>
+        [data-testid=stSidebar] {
+                background-color: #243b48;
+        }
+        </style>
+        """
+st.markdown(sidebar, unsafe_allow_html=True)
 
 toast = """
         <style>
@@ -64,21 +74,13 @@ st.markdown(toast, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 # SIDEBAR
-with stylable_container(
-        key = "sidebar_content",
-        css_styles = """
-        div[data-testid="stSidebarContent"] {
-                background-color: #243b48;
-        }
-        """
-        ):
-        with st.sidebar:
-                st.info("Creator: Ian Jure Macalisang")
-                b1_col, b2_col = st.columns(2)
-                with b1_col:
-                        repo_button = st.button("SOURCE CODE", use_container_width=True)
-                with b2_col:
-                        notebook_button = st.button("NOTEBOOK", use_container_width=True)
+with st.sidebar:
+        st.info("Creator: Ian Jure Macalisang")
+        b1_col, b2_col = st.columns(2)
+        with b1_col:
+                repo_button = st.button("SOURCE CODE", use_container_width=True)
+        with b2_col:
+                notebook_button = st.button("NOTEBOOK", use_container_width=True)
 
 # FORM
 with stylable_container(
