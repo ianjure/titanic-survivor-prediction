@@ -68,7 +68,7 @@ with st.sidebar:
         st.info("Creator: Ian Jure Macalisang")
         b1_col, b2_col = st.columns(2)
         with b1_col:
-                repo_button = st.button("SOURCE CODE")
+                repo_button = st.button("SOURCE CODE", use_container_width=True)
         with b2_col:
                 with stylable_container(
                         key = "notebook_button",
@@ -78,7 +78,7 @@ with st.sidebar:
                         }
                         """
                         ):
-                        notebook_button = st.button("NOTEBOOK")
+                        notebook_button = st.button("NOTEBOOK", use_container_width=True)
 
 # FORM
 with stylable_container(
