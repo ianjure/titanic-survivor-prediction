@@ -64,20 +64,20 @@ st.markdown(toast, unsafe_allow_html=True)
 st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
 # SIDEBAR
-with st.sidebar:
-        st.info("Creator: Ian Jure Macalisang")
-        b1_col, b2_col = st.columns(2)
-        with b1_col:
-                repo_button = st.button("SOURCE CODE", use_container_width=True)
-        with b2_col:
-                with stylable_container(
-                        key = "notebook_button",
-                        css_styles = """
-                        button[data-testid="baseButton-secondary"][class="st-emotion-cache-1d9593a ef3psqc13"] {
-                                    width: inherit;
-                        }
-                        """
-                        ):
+with stylable_container(
+        key = "sidebar_content",
+        css_styles = """
+        div[data-testid="stSidebarContent"] {
+                background-color: #0c131b;
+        }
+        """
+        ):
+        with st.sidebar:
+                st.info("Creator: Ian Jure Macalisang")
+                b1_col, b2_col = st.columns(2)
+                with b1_col:
+                        repo_button = st.button("SOURCE CODE", use_container_width=True)
+                with b2_col:
                         notebook_button = st.button("NOTEBOOK", use_container_width=True)
 
 # FORM
