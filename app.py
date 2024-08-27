@@ -34,7 +34,7 @@ toast = """
                 width: 100%;
                 background-color: #ffffff;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-                padding-left: 40px;
+                padding-left: 20px;
         }
 
         [data-testid=toastContainer] {
