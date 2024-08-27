@@ -47,7 +47,7 @@ toast = """
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 16px;
-                font-weight: 200;
+                font-weight: 400;
                 color: #24252d;
         }
         svg[data-baseweb="icon"] {
