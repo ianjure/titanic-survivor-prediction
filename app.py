@@ -34,7 +34,7 @@ toast = """
                 width: 100%;
                 background-color: #ffffff;
                 box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-                padding-left: 20px;
+                padding-left: 25px;
         }
 
         [data-testid=toastContainer] {
@@ -47,6 +47,7 @@ toast = """
         }
         [data-testid=toastContainer] [data-testid=stMarkdownContainer] > p {
                 font-size: 16px;
+                font-weight: 200;
                 color: #24252d;
         }
         svg[data-baseweb="icon"] {
