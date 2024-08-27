@@ -63,6 +63,14 @@ st.markdown(toast, unsafe_allow_html=True)
 # TITLE
 st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the Titanic?</h1>", unsafe_allow_html=True)
 
+# SIDEBAR
+with st.sidebar:
+    add_radio = st.radio(
+        "Choose a shipping method",
+        ("Standard (5-15 days)", "Express (2-5 days)")
+    )
+
+# FORM
 with stylable_container(
         key = "titanic_form",
         css_styles = """
