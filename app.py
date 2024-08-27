@@ -68,7 +68,7 @@ with stylable_container(
         key = "sidebar_content",
         css_styles = """
         div[data-testid="stSidebarContent"] {
-                background-color: #0c131b;
+                background-color: #243b48;
         }
         """
         ):
