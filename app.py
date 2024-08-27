@@ -136,7 +136,7 @@ with stylable_container(
 
                         if pred[0][1] > 0.6:
                                   st.toast(f"{name.split(" ")[0]}, you have a {round(pred[0][1] * 100)}% chance of survival!", icon="😄")
-                                  time.sleep(8)
+                                  time.sleep(15)
                         else:      
                                   st.toast(f"{name.split(" ")[0]}, you only have a {round(pred[0][0] * 100)}% chance of survival!", icon="😭")
-                                  time.sleep(8)
+                                  time.sleep(15)
