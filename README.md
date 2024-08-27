@@ -1,19 +1,19 @@
 # Titanic Survivor Prediction &nbsp; [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/ianjure/titanic-survivor-prediction/blob/master/Titanic_Survivor_Prediction_Notebook.ipynb)
-Let's go back to 1912 and explore the data behind the **Titanic** tragedy. The goal of this project is to create a machine learning model to predict if a passenger will survive the incident. We will utilize classification algorithms and processed data to find the best model. After that, we will create a web application that anyone can use to try and test our model with new data inputs.
+Let’s travel back to 1912 and dive into the data behind the Titanic tragedy. The goal of this project is to develop a machine learning model to predict whether a passenger survived the incident. We will employ classification algorithms and processed data to identify the most effective model. Subsequently, we will build a web application that allows users to test the model with new data inputs.
 
 ## Data Overview
-We will be using the **[Titanic](https://www.kaggle.com/competitions/titanic/data)** dataset from **Kaggle**, which is semi-clean data that contains passenger information like name, age, gender, socio-economic class, etc.
+We will use the **[Titanic](https://www.kaggle.com/competitions/titanic/data)** dataset from **Kaggle**, which is semi-clean and includes passenger information such as name, age, gender, and socio-economic class.
 
 ## Project Method
-1. **Clean the Data:** Handle missing values and process categorical variables.
-2. **Explore the Data:** Find meaningful insights and relationships among the variables.
-3. **Create new Features:** Make new and relevant features from the existing variables.
-4. **Build the Model:** Train the algorithms and fine-tune the best model.
-5. **Deploy the Model:** Build a web application to test new data.
+1. **Clean the Data:** Address missing values and process categorical variables.
+2. **Explore the Data:** Uncover meaningful insights and relationships among the variables.
+3. **Create New Features:** Develop additional relevant features from the existing data.
+4. **Build the Model:** Train various algorithms and fine-tune the best-performing model.
+5. **Deploy the Model:** Create a web application to test the model with new data.
 
 ## Next Steps
-1. Improve the **quality** of the data by creating more features.
-2. Try more **sophisticated** classification models and tuning methods.
+* **Enhance** data quality by generating more features.
+* **Experiment** with more advanced classification models and tuning techniques.
 
 <br>
 
