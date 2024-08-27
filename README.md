@@ -8,7 +8,7 @@ We will be using the **[Titanic](https://www.kaggle.com/competitions/titanic/dat
 1. **Clean the Data:** Handle missing values, create new features, and process categorical variables.
 2. **Explore the Data:** Find meaningful insights and relationships among the variables.
 3. **Build the Model:** Train the algorithms and fine-tune the best model.
-4. **Deploy the Model:** Build a Streamlit web application to test new data.
+4. **Deploy the Model:** Build a web application to test new data.
 
 ## Next Steps
 1. Improve the **quality** of the data by creating new and relevant features.
