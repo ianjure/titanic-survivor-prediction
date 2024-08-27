@@ -70,7 +70,7 @@ with st.sidebar:
         with b1_col:
                 repo_button = st.button("SOURCE CODE")
         with b2_col:
-                notebook_button = st.button("SEE NOTEBOOK")
+                notebook_button = st.button("   NOTEBOOK   ")
 
 # FORM
 with stylable_container(
