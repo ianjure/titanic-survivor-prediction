@@ -78,9 +78,9 @@ with st.sidebar:
         st.info("Creator: Ian Jure Macalisang")
         b1_col, b2_col = st.columns(2)
         with b1_col:
-                repo_button = st.button("SOURCE CODE", use_container_width=True)
+                repo_button = st.link_button("SOURCE CODE", "https://github.com/ianjure/titanic-survivor-prediction", use_container_width=True)
         with b2_col:
-                notebook_button = st.button("NOTEBOOK", use_container_width=True)
+                notebook_button = st.link_button("NOTEBOOK", "https://colab.research.google.com/github/ianjure/titanic-survivor-prediction/blob/master/Titanic_Survivor_Prediction_Notebook.ipynb", use_container_width=True)
 
 # FORM
 with stylable_container(
