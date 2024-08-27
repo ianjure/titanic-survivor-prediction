@@ -73,11 +73,8 @@ with st.sidebar:
                 with stylable_container(
                         key = "notebook_button",
                         css_styles = """
-                        button[data-testid="baseButton-secondary"] {
+                        button[data-testid="baseButton-secondary"][class="st-emotion-cache-1d9593a ef3psqc13"] {
                                     width: inherit;
-                                    color: black;
-                                    background-color: #ffffff;
-                                    border-color: #7faec2;
                         }
                         """
                         ):
