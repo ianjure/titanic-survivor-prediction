@@ -80,7 +80,7 @@ with st.sidebar:
                                     border-color: #7faec2;
                         }
                         """
-                ):
+                        ):
                         notebook_button = st.button("NOTEBOOK")
 
 # FORM
