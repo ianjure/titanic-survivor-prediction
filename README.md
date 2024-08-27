@@ -5,13 +5,14 @@ Let's go back to 1912 and explore the data behind the **Titanic** tragedy. The g
 We will be using the **[Titanic](https://www.kaggle.com/competitions/titanic/data)** dataset from **Kaggle**, which is semi-clean data that contains passenger information like name, age, gender, socio-economic class, etc.
 
 ## Project Method
-1. **Clean the Data:** Handle missing values, create new features, and process categorical variables.
+1. **Clean the Data:** Handle missing values and process categorical variables.
 2. **Explore the Data:** Find meaningful insights and relationships among the variables.
-3. **Build the Model:** Train the algorithms and fine-tune the best model.
-4. **Deploy the Model:** Build a web application to test new data.
+3. **Create new Features:** Make new and relevant features from the existing variables.
+4. **Build the Model:** Train the algorithms and fine-tune the best model.
+5. **Deploy the Model:** Build a web application to test new data.
 
 ## Next Steps
-1. Improve the **quality** of the data by creating new and relevant features.
+1. Improve the **quality** of the data by creating more features.
 2. Try more **sophisticated** classification models and tuning methods.
 
 <br>
