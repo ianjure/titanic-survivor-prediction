@@ -134,7 +134,7 @@ with stylable_container(
                         model = pickle.load(open('model.pkl', 'rb'))
                         pred = model.predict_proba(input_final)
 
-                        if ypred[0][1] > 0.6:
+                        if pred[0][1] > 0.6:
                                   st.toast(f"{name.split(" ")[0]}, you have a {round(ypred[0][1] * 100)}% chance of survival!", icon="😄")
                                   time.sleep(8)
                         else:      
