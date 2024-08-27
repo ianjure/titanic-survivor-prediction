@@ -70,7 +70,18 @@ with st.sidebar:
         with b1_col:
                 repo_button = st.button("SOURCE CODE")
         with b2_col:
-                notebook_button = st.button("   NOTEBOOK   ")
+                with stylable_container(
+                        key = "notebook_button",
+                        css_styles = """
+                        button[data-testid="baseButton-secondary"] {
+                                    width: inherit;
+                                    color: black;
+                                    background-color: #ffffff;
+                                    border-color: #7faec2;
+                        }
+                        """
+                ):
+                        notebook_button = st.button("NOTEBOOK")
 
 # FORM
 with stylable_container(
