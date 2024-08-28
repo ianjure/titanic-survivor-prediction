@@ -5,9 +5,9 @@ import time
 from preprocess import preprocess
 from streamlit_extras.stylable_container import stylable_container
 
+# PAGE CONFIGURATIONS
 st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered", initial_sidebar_state="collapsed")
 
-# PAGE CONFIGURATIONS
 top = """
         <style>
         .block-container {
