@@ -75,7 +75,7 @@ st.markdown("<h1 style='text-align: center; color: white;'>Can You Survive the T
 
 # SIDEBAR
 with st.sidebar:
-        st.info("Creator: Ian Jure Macalisang")
+        st.link_button("**Creator:** Ian Jure Macalisang", "https://github.com/ianjure", use_container_width=True)
         b1_col, b2_col = st.columns(2)
         with b1_col:
                 repo_button = st.link_button("SOURCE CODE", "https://github.com/ianjure/titanic-survivor-prediction", use_container_width=True)
