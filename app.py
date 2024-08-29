@@ -156,8 +156,8 @@ with stylable_container(
                         pred = model.predict_proba(input_final)
 
                         if pred[0][1] > 0.6:
-                                  st.toast(f"{name.split(" ")[0]}, you have a {round(pred[0][1] * 100)}% chance of survival!", icon="😄")
+                                  st.toast(f"{name.split(" ")[0]}, you have a **{round(pred[0][1] * 100)}%** chance of survival!", icon="😄")
                                   time.sleep(10)
                         else:      
-                                  st.toast(f"{name.split(" ")[0]}, you only have a {round(pred[0][0] * 100)}% chance of survival!", icon="😭")
+                                  st.toast(f"{name.split(" ")[0]}, you only have a **{round(pred[0][0] * 100)}%** chance of survival!", icon="😭")
                                   time.sleep(10)
