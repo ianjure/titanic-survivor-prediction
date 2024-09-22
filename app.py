@@ -12,7 +12,7 @@ top = """
         <style>
         .block-container {
                 padding-top: 0rem;
-                padding-bottom: 0rem;
+                padding-bottom: 5rem;
                 margin-top: 0rem;
         }
         </style>
