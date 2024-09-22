@@ -6,7 +6,7 @@ from preprocess import preprocess
 from streamlit_extras.stylable_container import stylable_container
 
 # PAGE CONFIGURATIONS
-st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", layout="centered", initial_sidebar_state="collapsed")
+st.set_page_config(page_title="Titanic Survival Predictor", page_icon="🚢", layout="centered", initial_sidebar_state="collapsed")
 
 top = """
         <style>
