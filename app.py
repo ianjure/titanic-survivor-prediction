@@ -24,6 +24,9 @@ btn = """
         [data-testid="stBaseButton-secondaryFormSubmit"] {
                 width: inherit;
         }
+        [class="st-emotion-cache-2fwri8 e16zdaao1"] {
+                border: 1px solid white;
+        }
         </style>
         """
 st.markdown(btn, unsafe_allow_html=True)
