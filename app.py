@@ -11,8 +11,8 @@ st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", 
 top = """
         <style>
         .block-container {
-                padding-top: 4rem;
-                padding-bottom: 5rem;
+                padding-top: 0rem;
+                padding-bottom: 0rem;
                 margin-top: 0rem;
         }
         </style>
