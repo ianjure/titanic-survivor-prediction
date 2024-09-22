@@ -11,13 +11,22 @@ st.set_page_config(page_title="Can You Survive the Titanic?", page_icon="🚢", 
 top = """
         <style>
         .block-container {
-                padding-top: 5rem;
+                padding-top: 4rem;
                 padding-bottom: 5rem;
                 margin-top: 0rem;
         }
         </style>
         """
 st.markdown(top, unsafe_allow_html=True)
+
+btn = """
+        <style>
+        [data-testid="stBaseButton-secondaryFormSubmit"] {
+                width: inherit;
+        }
+        </style>
+        """
+st.markdown(btn, unsafe_allow_html=True)
 
 hide = """
         <style>
